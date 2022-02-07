@@ -10,7 +10,7 @@ class TasksController {
     }
 
     getTask = async (req, res) => {
-        const task = await tasksService.findByName();
+        const task = await tasksService.findByName(req.params.nome);
         res.send(task); 
 
     }

@@ -7,8 +7,8 @@ class tasksService {
 
      findAllConcluded = async () => await TasksModel.find({concluido: true});
 
-     findByName = async () => {
-          return await TasksModel.find({nome: 'nome'});
+     findByName = async (nome) => {
+          return await TasksModel.find({nome:  nome});
      }
 
      create = async (task) => {
