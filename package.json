@@ -1,0 +1,35 @@
+{
+  "name": "todolist-project-backend",
+  "version": "1.0.0",
+  "description": "Backend realizado com express e banco de dados para uma lista de tarefas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carla-carvalho/todolist-project-backend.git"
+  },
+  "keywords": [
+    "todolist",
+    "backend"
+  ],
+  "author": "Carla Carvalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carla-carvalho/todolist-project-backend/issues"
+  },
+  "homepage": "https://github.com/carla-carvalho/todolist-project-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
