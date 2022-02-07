@@ -16,7 +16,11 @@ class tasksService {
      }
 
      edit = async (id, task) =>{
-          return TasksModel.updateOne({_id: id}, task);
+          return await TasksModel.updateOne({_id: id}, task);
+     }
+
+     delete = async (id) => {
+          return TasksModel.deleteOne({_id: id});
      }
 }
 

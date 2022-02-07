@@ -1,3 +1,4 @@
+
 const TasksSevice = require('./../services/tasks.service');
 const tasksService = new TasksSevice;
 
@@ -26,15 +27,31 @@ class TasksController {
         res.send({message: 'Tarefa adicionada com sucesso'})
         })
         .catch((err) => {
-            res.status(500).send({message: 'Erro no servidor'})
+            res.status(500).send({message: 'Um erro foi encontrado'})
         })
     }
 
-    editTask = async (req, res) =>{
-        const idParam = req.param.id;
+    editTask =  async (req, res) => {
+        const idParam = req.params.id;
         const taskEdit = req.body;
         await tasksService.edit(idParam, taskEdit)
+        .then(() => {
+            res.send({message: 'A tarefa foi editada com sucesso.'})
+        })
+        .catch(err => {
+            res.status(500).send({message: 'Um erro foi encontrado'})
+        })
+    }
 
+    deleteTask = async (req, res) => {
+        const idParam = req.params.id;
+        await tasksService.delete(idParam)
+        .then(() => {
+            res.send({message: 'A tarefa foi excluída com sucesso'})
+        })
+        .catch(err => {
+            res.status(500).send({message:'Um erro foi encontrado'})
+        })
     }
 
 }
