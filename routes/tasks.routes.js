@@ -10,8 +10,8 @@ router.get('/concluidas', tasksController.getTaskConcluded);
 
 router.post('/add', tasksController.createTask);
 
-router.put('/:id/edit', tasksController.editTask);
+router.put('/:id', tasksController.editTask);
 
-router.delete('/:id/delete', tasksController.deleteTask);
+router.delete('/:id', tasksController.deleteTask);
 
 module.exports = router;
