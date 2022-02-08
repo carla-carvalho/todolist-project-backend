@@ -1,24 +1,3 @@
-// const task = (sequelize, DataTypes) => {
-// const Task = sequelize.define('Task', {
-//     nome: { 
-//         type: DataTypes.STRING
-//     },
-//     descricao: { 
-//         type: DataTypes.STRING
-//     },
-//     prioridade: {
-//         type: DataTypes.STRING
-//     },
-//     concluido: {
-//         type: DataTypes.BOOLLEAN
-//     }
-
-
-
-// }
-
-
-
 const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({

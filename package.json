@@ -4,6 +4,7 @@
   "description": "Backend realizado com express e banco de dados para uma lista de tarefas",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/carla-carvalho/todolist-project-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.0",
     "pg": "^8.7.3",

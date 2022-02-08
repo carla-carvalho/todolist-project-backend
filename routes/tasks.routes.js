@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const TasksController = require('./../controllers/tasks.controller');
 const tasksController = new TasksController;
+const cors = require('cors');
 
-router.get('/', tasksController.getTasks);
+router.get('/',  tasksController.getTasks);
 router.get('/search', tasksController.getTask);
 router.get('/concluidas', tasksController.getTaskConcluded);
 
