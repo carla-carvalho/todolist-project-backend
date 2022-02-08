@@ -21,6 +21,6 @@ Conn(db_url, db_user, db_pass, db_data);
 app.use('/', TasksRouter);
 
 const port = 3001;
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`O servidor está rodando na porta ${port}`)
 })
